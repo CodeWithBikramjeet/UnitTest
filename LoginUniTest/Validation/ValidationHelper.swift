@@ -8,10 +8,10 @@
 import Foundation
 
 final class ValidationHelper {
-    
+        
     //MARK: - Private Methods
     
-    private func validateEmail(email: String?) -> ValidationType {
+    private func isEmailEmpty(email: String?) -> ValidationType {
         guard let email, !email.isEmpty else { return .emptyEmail }
         return .success
     }
@@ -25,7 +25,7 @@ final class ValidationHelper {
     //MARK: - Public Methods
     
     func validateLogin(email: String?, password: String?) -> ValidationType {
-        let emailType = validateEmail(email: email)
+        let emailType = isEmailEmpty(email: email)
         let passwordType = validatePassword(password: password)
         if emailType != .success {
             return emailType

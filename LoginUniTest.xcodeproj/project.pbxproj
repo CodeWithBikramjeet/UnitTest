@@ -20,6 +20,9 @@
 		ADD4642F2C1882CE0012F410 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4642E2C1882CE0012F410 /* UIViewController+Extension.swift */; };
 		ADD464322C1883BF0012F410 /* ValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD464312C1883BE0012F410 /* ValidationType.swift */; };
 		ADD464342C1884620012F410 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD464332C1884620012F410 /* ValidationHelper.swift */; };
+		ADD464362C1AC42D0012F410 /* LoginViewModelTextCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD464352C1AC42D0012F410 /* LoginViewModelTextCases.swift */; };
+		ADE5F8D52C1B0F6600F82203 /* EmailPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5F8D42C1B0F6600F82203 /* EmailPropertyWrapper.swift */; };
+		ADE5F8D72C1B0F7A00F82203 /* LoginAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5F8D62C1B0F7A00F82203 /* LoginAPIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		ADD4642E2C1882CE0012F410 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		ADD464312C1883BE0012F410 /* ValidationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationType.swift; sourceTree = "<group>"; };
 		ADD464332C1884620012F410 /* ValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
+		ADD464352C1AC42D0012F410 /* LoginViewModelTextCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTextCases.swift; sourceTree = "<group>"; };
+		ADE5F8D42C1B0F6600F82203 /* EmailPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailPropertyWrapper.swift; sourceTree = "<group>"; };
+		ADE5F8D62C1B0F7A00F82203 /* LoginAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				ADD464062C16BB840012F410 /* LoginUniTestTests.swift */,
+				ADD464352C1AC42D0012F410 /* LoginViewModelTextCases.swift */,
 			);
 			path = LoginUniTestTests;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 		ADD464252C1830130012F410 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ADE5F8D62C1B0F7A00F82203 /* LoginAPIModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			children = (
 				ADD464312C1883BE0012F410 /* ValidationType.swift */,
 				ADD464332C1884620012F410 /* ValidationHelper.swift */,
+				ADE5F8D42C1B0F6600F82203 /* EmailPropertyWrapper.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -361,9 +370,11 @@
 				ADD4642B2C1873650012F410 /* LoginViewModel.swift in Sources */,
 				ADD464342C1884620012F410 /* ValidationHelper.swift in Sources */,
 				ADD464292C1830870012F410 /* LoginViewController.swift in Sources */,
+				ADE5F8D52C1B0F6600F82203 /* EmailPropertyWrapper.swift in Sources */,
 				ADD463F02C16BB830012F410 /* AppDelegate.swift in Sources */,
 				ADD4642F2C1882CE0012F410 /* UIViewController+Extension.swift in Sources */,
 				ADD464322C1883BF0012F410 /* ValidationType.swift in Sources */,
+				ADE5F8D72C1B0F7A00F82203 /* LoginAPIModel.swift in Sources */,
 				ADD463F22C16BB830012F410 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD464072C16BB840012F410 /* LoginUniTestTests.swift in Sources */,
+				ADD464362C1AC42D0012F410 /* LoginViewModelTextCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

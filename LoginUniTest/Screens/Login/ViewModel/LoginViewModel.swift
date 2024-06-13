@@ -17,7 +17,7 @@ final class LoginViewModel {
     
     //MARK: - Public Methods
     
-    func checkLoginValidation(email: String?, password: String?)-> ValidationType {
+    func validateEmail(email: String?, password: String?)-> ValidationType {
         self.helper.validateLogin(email: email, password: password)
     }
     

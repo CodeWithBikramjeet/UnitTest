@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - Private Properties
     
-    private lazy var loginViewModel: LoginViewModel = {
+    private lazy var viewModel: LoginViewModel = {
         return LoginViewModel()
     }()
     
@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction func didTapOnLoginButton(_ sender: UIButton) {
-        let type = self.loginViewModel.checkLoginValidation(email: emailTextField.text, password: passwordTextField.text)
+        let type = self.viewModel.validateEmail(email: emailTextField.text, password: passwordTextField.text)
         self.showAlert(message: type.rawValue)
     }
     
