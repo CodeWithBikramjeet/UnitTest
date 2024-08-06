@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - Private Properties
     
-    private lazy var viewModel: LoginViewModel = {
+    fileprivate lazy var viewModel: LoginViewModel = {
         return LoginViewModel()
     }()
     

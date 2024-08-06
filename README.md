@@ -16,7 +16,7 @@ ensure the correct functionality of the login process, including input validatio
 ## Introduction
 
 **The Login Module handles user authentication, including validating user input and communicating with the authentication API. This 
-README provides an overview of the unit tests implemented to verify the correctness and robustness of the Login Module. **
+README provides an overview of the unit tests implemented to verify the correctness and robustness of the Login Module.**
 
 ### Setup:-
 
@@ -24,11 +24,11 @@ To run the unit tests, follow these steps:
 
 ### 1. Clone the repository:-
 
-    **git clone https://github.com/your-repository.git **
+    **git clone https://github.com/your-repository.git**
 
 ### 2. Open the project in Xcode:
 
-** open YourProject.xcodeproj **
+**open YourProject.xcodeproj**
 
 # Test Cases
 

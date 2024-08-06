@@ -33,3 +33,78 @@ struct EmailPropertyWrapper {
     }
     
 }
+
+import Foundation
+
+struct Student: Codable {
+    let id: Int
+    let name: String
+    let grade: String
+}
+
+import Foundation
+
+class StudentService {
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+    
+    func fetchStudentList(completion: @escaping (Result<[Student], Error>) -> Void) {
+        let url = URL(string: "https://api.example.com/students")!
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(NSError(domain: "No data", code: 0, userInfo: nil)))
+                return
+            }
+            
+            do {
+                let students = try JSONDecoder().decode([Student].self, from: data)
+                completion(.success(students))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+}
+
+import Foundation
+
+class MockURLProtocol: URLProtocol {
+    static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data))?
+    
+    override class func canInit(with request: URLRequest) -> Bool {
+        return true
+    }
+    
+    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        return request
+    }
+    
+    override func startLoading() {
+        guard let handler = MockURLProtocol.requestHandler else {
+            fatalError("Request handler is not set.")
+        }
+        
+        do {
+            let (response, data) = try handler(request)
+            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+            client?.urlProtocol(self, didLoad: data)
+            client?.urlProtocolDidFinishLoading(self)
+        } catch {
+            client?.urlProtocol(self, didFailWithError: error)
+        }
+    }
+    
+    override func stopLoading() {}
+}
+
+
